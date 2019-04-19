@@ -27,19 +27,22 @@ Will return the numerical series list where  the value is divisible by 3 is Fizz
 |size    |int   | Items per page or page size default 100 if negative or 0 default to 100 if mayor than list scope (100,000,000,000) default to scope |
 
 #### Return Object (JSON)
+
 |Name    | Type  | Description    |
 |--------|-------|----------------|
 |page    | PageObject| Pagination Object |
 |data    | Array[FizzBuzzObject]| Fizzbuzz response object |
 
-**PageObject**
+#### PageObject
+
 |Name    | Type  | Description    |
 |--------|-------|----------------|
 |current | int   | Current page index starts at 1 |
 |size    | int   | Items per page |  
 |total    | int| Total page available scope devided by size |
 
-**FizzBuzzObject**
+#### FizzBuzzObject
+
 |Name    | Type  | Description    |
 |--------|-------|----------------|
 |id      | int   | Id or index of item on list 0>=id<=(FIZZ_BUZZ_SCOPE=100,000,000,000) |
