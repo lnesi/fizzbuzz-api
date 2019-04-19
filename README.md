@@ -48,3 +48,8 @@ Will return the numerical series list where  the value is divisible by 3 is Fizz
 |id      | int   | Id or index of item on list 0>=id<=(FIZZ_BUZZ_SCOPE=100,000,000,000) |
 |value    | mixed   | Integer or String constant for Fizz, Buzz and FizzBuzz |  
 |fav   | boolean| Current Session favorite  |
+
+```
+POST: /api/v1/addfav
+```
+This endpoint will allow to mark a specific index on the list has favorite if post for second time (already mark as favorite) will be removed from favorites.
