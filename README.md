@@ -44,7 +44,7 @@ PASS  src/FizzBuzz.test.js
      ✓ returns string(Buzz) case 27260
      ✓ returns string(FizzBuzz) case 15
      ✓ returns string(FizzBuzz) case 81810
-     ✓ resturns default(int) numeber case 7 (1ms)
+     ✓ returns default(int) number case 7 (1ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       12 passed, 12 total

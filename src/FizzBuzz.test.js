@@ -60,7 +60,7 @@ describe("FizzBuzz", () => {
       expect(FizzBuzz.calculate(81810)).toEqual("FizzBuzz")
     });
 
-    test("resturns default(int) numeber case 7", () => {
+    test("returns default(int) number case 7", () => {
         expect(FizzBuzz.calculate(7)).toEqual(7);
     });
   });
