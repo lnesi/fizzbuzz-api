@@ -37,4 +37,11 @@ function calculate(index) {
   }
   return index;
 }
-module.exports = { getList, FIZZ_RULE, BUZZ_RULE, FIZZ_BUZZ_RULE, LIST_SCOPE };
+module.exports = {
+  FIZZ_RULE,
+  BUZZ_RULE,
+  FIZZ_BUZZ_RULE,
+  LIST_SCOPE,
+  getList,
+  calculate
+};

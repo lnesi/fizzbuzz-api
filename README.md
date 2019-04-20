@@ -9,18 +9,39 @@ Development
 ```
 npm run dev
 ```
+In both cases once start or development the API will become available at ```http://localhost:3000```
+
 Test
 ```
 npm run Test
 ```
-
 Test Watch (TDD)
 ```
 npm run test -- --watch
 ```
 
+## Tests
+```
+PASS  src/FizzBuzz.test.js
+ FizzBuzz
+   getList
+     ✓ returns correct page size (2ms)
+     ✓ returns an array
+     ✓ result is a list of FizzBuzzObjects (1ms)
+     ✓ returns correct page
+     ✓ returns corret item favorite (2ms)
+   calculate
+     ✓ returns string(Fizz) case 3 (1ms)
+     ✓ returns string(Fizz) case 16362
+     ✓ returns string(Buzz) case 5 (1ms)
+     ✓ returns string(Buzz) case 27260
+     ✓ returns string(FizzBuzz) case 15
+     ✓ returns string(FizzBuzz) case 81810
+     ✓ resturns default(int) numeber case 7 (1ms)
 
-In both cases once start or development the API will become available at ```http://localhost:3000```
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+```
 
 ## End Points (API Specs)
 
