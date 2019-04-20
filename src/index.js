@@ -56,28 +56,33 @@ app.get("/api/v1/fizzbuzz", (req, res) => {
 });
 
 app.post("/api/v1/addfav", (req, res) => {
-  if (req.body.id) {
-    if (req.session.favorites.indexOf(req.body.id) === -1) {
-      req.session.favorites.push(req.body.id);
-      return res.send({
-        status: "ok",
-        msg: `Index ${req.body.id} Added`,
-        data: req.session.favorites
-      });
+  if (!isNaN(req.body.id)) {
+    if (req.body.id > 0 && req.body.id <= FizzBuzz.LIST_SCOPE) {
+      if (req.session.favorites.indexOf(req.body.id) === -1) {
+        req.session.favorites.push(req.body.id);
+        return res.send({
+          status: "ok",
+          msg: `Index ${req.body.id} Added`,
+          data: req.session.favorites
+        });
+      } else {
+        req.session.favorites.splice(
+          req.session.favorites.indexOf(req.body.id),
+          1
+        );
+        return res.send({
+          status: "ok",
+          msg: `Index ${req.body.id} removed`,
+          data: req.session.favorites
+        });
+      }
     } else {
-      req.session.favorites.splice(
-        req.session.favorites.indexOf(req.body.id),
-        1
-      );
-      return res.send({
-        status: "ok",
-        msg: `Index ${req.body.id} removed`,
-        data: req.session.favorites
-      });
+      res.status(400);
+      return res.send({ status: "error", msg: "id out of bounds" });
     }
   } else {
     res.status(400);
-    return res.send({ status: "error", msg: "Invalid POST id required" });
+    return res.send({ status: "error", msg: "Invalid POST id(int) required" });
   }
 });
 app.listen(PORT);

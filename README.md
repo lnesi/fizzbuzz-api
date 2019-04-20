@@ -53,3 +53,17 @@ Will return the numerical series list where  the value is divisible by 3 is Fizz
 POST: /api/v1/addfav
 ```
 This endpoint will allow to mark a specific index on the list has favorite if post for second time (already mark as favorite) will be removed from favorites.
+
+#### Parameters (JSON Body)
+
+|Name    | Type  | Description    |
+|--------|-------|----------------|
+|id    |int  | id of item in list to add to favorites id<=FIZZ_BUZZ_SCOPE |
+
+#### Return Object (JSON)
+
+|Name    | Type  | Description    |
+|--------|-------|----------------|
+|status  | string| Operation result "ok" or "error" |
+|msg     | string| Operation result details|
+|data    | Array[int] | List of id in favorites  |
