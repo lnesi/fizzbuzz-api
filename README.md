@@ -9,6 +9,16 @@ Development
 ```
 npm run dev
 ```
+Test
+```
+npm run Test
+```
+
+Test Watch (TDD)
+```
+npm run test -- --watch
+```
+
 
 In both cases once start or development the API will become available at ```http://localhost:3000```
 
