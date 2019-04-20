@@ -73,7 +73,7 @@ app.get("/api/v1/favorites", (req, res) => {
 app.post("/api/v1/favorites", (req, res) => {
   if (!isNaN(req.body.id)) {
     if (req.body.id > 0 && req.body.id <= FizzBuzz.LIST_SCOPE) {
-      if (req.session.favorites.indexOf(req.body.id) === -1) {
+      if (req.session.favorites.indexOf(parseInt(req.body.id)) === -1) {
         req.session.favorites.push(parseInt(req.body.id));
         return res.send({
           status: "ok",
@@ -82,7 +82,7 @@ app.post("/api/v1/favorites", (req, res) => {
         });
       } else {
         req.session.favorites.splice(
-          req.session.favorites.indexOf(req.body.id),
+          req.session.favorites.indexOf(parseInt(req.body.id)),
           1
         );
         return res.send({
