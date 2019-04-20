@@ -1,5 +1,5 @@
 # FizzBuzz API
- 
+
 **Start**
 
 ```
@@ -132,3 +132,22 @@ This endpoint will allow to mark a specific index on the list has favorite if po
 | status | string     | Operation result "ok" or "error" |
 | msg    | string     | Operation result details         |
 | data   | Array[int] | List of id in favorites          |
+
+```
+GET: /api/v1/favorites
+```
+Return the current session favorites. Array of Partial FizzBuzzObject.
+```json
+{
+    "data": [
+        {
+            "id": 14,
+            "value": 14
+        },
+        {
+            "id": 25,
+            "value": "Buzz"
+        }
+    ]
+}
+```

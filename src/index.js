@@ -60,6 +60,13 @@ app.get("/api/v1/fizzbuzz", (req, res) => {
     data: list
   });
 });
+app.get("/api/v1/favorites", (req, res) => {
+  res.send({
+    data: req.session.favorites.map(id => {
+      return { id, value: FizzBuzz.calculate(id) };
+    })
+  });
+});
 
 app.post("/api/v1/addfav", (req, res) => {
   if (!isNaN(req.body.id)) {
