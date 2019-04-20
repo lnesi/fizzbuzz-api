@@ -8,6 +8,10 @@
 |_| |_/___/___|_.__/ \__,_/___/___|
 ```
 
+**Requirements**
+Node.js 9 or above including NPM.
+By default the server will run in PORT 3000 http please make sure this port is not used by another service. 
+
 **Start**
 
 ```
