@@ -100,4 +100,12 @@ app.post("/api/v1/favorites", (req, res) => {
     return res.send({ status: "error", msg: "Invalid POST id(int) required" });
   }
 });
+
+console.log(" __ _          _                   ");
+console.log("/ _(_)        | |                  ");
+console.log("| |_ _ _______| |__  _   _ ________");
+console.log("|  _| |_  /_  / '_ \| | | |_  /_  /");
+console.log("| | | |/ / / /| |_) | |_| |/ / / / ");
+console.log("|_| |_/___/___|_.__/ \__,_/___/___|");
+console.log("Server starter at port: ",PORT);
 app.listen(PORT);
