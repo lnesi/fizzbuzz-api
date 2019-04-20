@@ -51,6 +51,7 @@ app.get("/api/v1/fizzbuzz", (req, res) => {
     pageSize,
     req.session.favorites
   );
+  console.log(req.session.favorites);
   return res.send({
     page: {
       current: currentPage,
@@ -73,7 +74,7 @@ app.post("/api/v1/favorites", (req, res) => {
   if (!isNaN(req.body.id)) {
     if (req.body.id > 0 && req.body.id <= FizzBuzz.LIST_SCOPE) {
       if (req.session.favorites.indexOf(req.body.id) === -1) {
-        req.session.favorites.push(req.body.id);
+        req.session.favorites.push(parseInt(req.body.id));
         return res.send({
           status: "ok",
           msg: `Index ${req.body.id} Added`,
