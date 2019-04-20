@@ -60,6 +60,7 @@ app.get("/api/v1/fizzbuzz", (req, res) => {
     data: list
   });
 });
+
 app.get("/api/v1/favorites", (req, res) => {
   res.send({
     data: req.session.favorites.map(id => {
@@ -68,7 +69,7 @@ app.get("/api/v1/favorites", (req, res) => {
   });
 });
 
-app.post("/api/v1/addfav", (req, res) => {
+app.post("/api/v1/favorites", (req, res) => {
   if (!isNaN(req.body.id)) {
     if (req.body.id > 0 && req.body.id <= FizzBuzz.LIST_SCOPE) {
       if (req.session.favorites.indexOf(req.body.id) === -1) {

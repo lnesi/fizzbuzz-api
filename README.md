@@ -106,7 +106,7 @@ Will return the numerical series list where the value is divisible by 3 is Fizz,
 | fav   | boolean | Current Session favorite                                             |
 
 ```
-POST: /api/v1/addfav
+POST: /api/v1/favorites
 ```
 
 This endpoint will allow to mark a specific index on the list has favorite if post for second time (already mark as favorite) will be removed from favorites.
